@@ -51,7 +51,15 @@ describe('Cinema', function () {
     const actual = cinema.findByYear(2020);
     assert.deepStrictEqual(actual, []);
   });
-  it('should be able to check whether all films are over a particular length');
-  it('should be able to calculate total running time of all films');
+
+  it('should be able to check whether all films are over a particular length', function () {
+    const actual = cinema.areAllFilmsOverLength(120);
+    assert.deepStrictEqual(actual, false);
+  });
+
+  it('should be able to calculate total running time of all films', function () {
+    const actual = cinema.totalRunTime();
+    assert.deepStrictEqual(actual, 622);
+  });
 
 });

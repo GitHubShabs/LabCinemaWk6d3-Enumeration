@@ -20,4 +20,13 @@ Cinema.prototype.findByYear = function (year) {
 };
 
 
+Cinema.prototype.areAllFilmsOverLength = function (length) {
+  let allFilmsOverLength = true;
+  const result = this.films.filter((film) => {return film.length < length });
+  if (result != []) {
+    allFilmsOverLength = false;
+  }
+  return allFilmsOverLength;
+};
+
 module.exports = Cinema;
