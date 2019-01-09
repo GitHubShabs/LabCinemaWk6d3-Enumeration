@@ -29,4 +29,10 @@ Cinema.prototype.areAllFilmsOverLength = function (length) {
   return allFilmsOverLength;
 };
 
+Cinema.prototype.totalRunTime = function () {
+  return this.films.reduce((runningTotal, film) => {
+    return runningTotal + film.length;
+  } ,0);
+};
+
 module.exports = Cinema;
