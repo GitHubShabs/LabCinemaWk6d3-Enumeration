@@ -8,10 +8,14 @@ Cinema.prototype.filmTitles = function () {
 };
 
 Cinema.prototype.findByTitle = function (title) {
-  return this.films.filter((banana) => {return banana.title === title});
-
+  return this.films.filter((film) => {return film.title === title});
 };
 
+Cinema.prototype.findByGenre = function (genre) {
+  return this.films.filter((film) => {return film.genre === genre});
+};
 
+Cinema.prototype.findByYear = function (year) {
+  return this.films.filter((film) => {return film.year === year})};
 
 module.exports = Cinema;
